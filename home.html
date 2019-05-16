@@ -74,36 +74,36 @@
       </p>
 
       <p>
-        <label for="player1">Number of Kills</label>
+        <label for="p1Kills">Number of Kills</label>
         <input type="number" name="p1Kills" id='p1Kills'>
       </p>
     </div>
 
     <div class = 'playerGroups'>
       <p>
-        <label for="player1">Player 2</label>
-        <input type="text" name="player1" id='player2'>
+        <label for="player2">Player 2</label>
+        <input type="text" name="player2" id='player2'>
       </p>
 
       <p>
-        <label for="player1">Number of Kills</label>
+        <label for="p2Kills">Number of Kills</label>
         <input type="number" name="p2Kills" id='p2Kills'>
       </p>
     </div>
 
     <div class = 'playerGroups'>
       <p>
-        <label for="player1">Player 3</label>
-        <input type="text" name="player1" id='player3'>
+        <label for="player3">Player 3</label>
+        <input type="text" name="player3" id='player3'>
       </p>
 
       <p>
-        <label for="player1">Number of Kills</label>
+        <label for="p3Kills">Number of Kills</label>
         <input type="number" name="p3Kills" id='p3Kills'>
       </p>
     </div>
 
-    <input type='submit' value='Submit' onclick="addtoDB()" class ='button'>
+    <input type="submit" value="Submit" onclick="addtoDB()" class ='button'>
   </form>
 
   <p id = 'submitted'></p>
@@ -124,14 +124,13 @@
     var player1 = document.getElementById('player1').value;
     var p1Kills = document.getElementById('p1Kills').value;
 
-    var player1 = document.getElementById('player2').value;
-    var p1Kills = document.getElementById('p2Kills').value;
+    var player2 = document.getElementById('player2').value;
+    var p2Kills = document.getElementById('p2Kills').value;
 
-    var player1 = document.getElementById('player3').value;
-    var p1Kills = document.getElementById('p3Kills').value;
+    var player3 = document.getElementById('player3').value;
+    var p3Kills = document.getElementById('p3Kills').value;
 
-    var queryString = "?teamName=" + teamName +  "&player1=" + player1 + "&p1Kills=" + p1Kills +  "&player2=" + player2 +
-    "&p2Kills=" + p2Kills +  "&player3=" + player3 + "&p3Kills=" + p3Kills;
+    var queryString = "?teamName=" + teamName + "&player1=" + player1 + "&player2=" + player2 + "&player3=" + player3;
 
     console.log(queryString);
      // Ajax GET call to post to database
